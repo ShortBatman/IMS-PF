@@ -1,0 +1,139 @@
+46
+1
+Pepsi
+110 45
+2
+Cola
+110 30
+3
+Lays
+120 29
+4
+Oil
+150 49
+5
+Book
+200 30
+6
+Bread
+30 50
+7
+Milk
+80 20
+8
+Cheese
+120 30
+9
+Eggs
+50 40
+10
+Rice
+250 25
+11
+Apple
+120 40
+12
+Banana
+80 7
+13
+Tomato
+40 50
+14
+Potato
+30 60
+15
+Carrot
+60 40
+16
+Orange
+90 35
+17
+Onion
+40 70
+18
+Chicken
+200 15
+19
+Fish
+180 20
+20
+Breadsticks
+40 30
+21
+Yogurt
+60 25
+22
+Ice Cream
+120 15
+24
+Coffee
+100 13
+25
+Tea
+80 35
+26
+Sugar
+60 30
+27
+Salt
+40 45
+28
+Honey
+70 20
+29
+Jam
+30 35
+30
+Pasta
+90 40
+31
+Ketchup
+50 30
+32
+Mayonnaise
+40 25
+33
+Soap
+70 20
+34
+Shampoo
+60 18
+35
+Toothpaste
+30 25
+36
+Toilet Paper
+50 15
+37
+Tissue
+40 20
+38
+Detergent
+80 10
+39
+Dish Soap
+40 15
+40
+Batteries
+60 25
+41
+Light Bulb
+30 20
+42
+T-Shirt
+40 30
+43
+Jeans
+50 15
+44
+Shoes
+60 20
+45
+Umbrella
+30 19
+46
+Sunglasses
+20 15
+23
+
+234 3
