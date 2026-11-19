@@ -1,162 +1,127 @@
-# Inventory Management System
+<div align="center">
 
-A comprehensive console-based inventory management system built in C++ for managing products, tracking inventory, recording sales, and generating business reports.
+# 🛒 IMS-PF
+### Grocery Store Inventory Management System
 
-## Features
+*A console-based inventory, sales, and reporting tool written in C++*
 
-### 1. Product Management
-- **Add Products**: Register new products with unique IDs, names, prices, and quantities
-- **Update Products**: Modify existing product information including name, price, and stock quantity
-- **Delete Products**: Remove products from the inventory with confirmation
-- **Duplicate Prevention**: Automatic validation to prevent duplicate product IDs or names
+![C++](https://img.shields.io/badge/C++-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Type](https://img.shields.io/badge/Interface-Console-black?style=for-the-badge&logo=gnubash&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)
+![Purpose](https://img.shields.io/badge/Made%20for-Education-orange?style=for-the-badge)
 
-### 2. Inventory Tracking
-- **View Complete Inventory**: Display all products with their details in a formatted table
-- **Search Products**: Quick lookup of products by ID with detailed information display
-- **Real-time Stock Updates**: Inventory automatically updates after each sale
+</div>
 
-### 3. Sales Management
-- **Record Sales**: Process multi-item transactions with automatic bill calculation
-- **Stock Validation**: Prevents overselling by checking available quantities
-- **Detailed Receipts**: Generate itemized bills with product details and grand totals
-- **Automatic Inventory Updates**: Stock levels decrease automatically after each sale
+---
 
-### 4. Reports & Analytics
-- **View All Sales**: Complete sales history with product details and quantities
-- **Top Selling Product**: Identifies the best-performing product by total quantity sold
-- **Total Revenue**: Calculates cumulative revenue from all recorded sales
+## 📖 About
 
-### 5. Data Persistence
-- **Auto-save Functionality**: All data is saved to text files upon exit
-- **Auto-load on Startup**: Previous session data loads automatically when the program starts
-- **Separate File Storage**: Inventory and sales data stored in separate files for organization
+**IMS-PF** is a console-based Inventory Management System built for a grocery store. It was created as a **semester-end project for Programming Fundamentals** and covers the full day-to-day loop of a small shop: managing products, tracking stock, recording sales, and reviewing business reports. Everything is saved to plain text files, so your data is still there the next time you launch the program.
 
-## File Structure
+## ✨ Features
+
+| | Module | What it does |
+|---|---|---|
+| 📦 | **Product Management** | Add, update, and delete products. Duplicate IDs and names are blocked. |
+| 📊 | **Inventory Tracking** | View the full inventory in a clean table and search by product ID. Stock updates automatically after every sale. |
+| 💰 | **Sales Management** | Multi-item transactions, itemized bills, stock validation to prevent overselling, and automatic stock reduction. |
+| 📈 | **Reports** | Complete sales history, top-selling product by quantity, and total revenue. |
+| 💾 | **Persistence** | Data is saved to text files on exit and loaded on startup. |
+
+## 🗂️ Project Structure
 
 ```
-├── main.cpp                    # Main program and menu system
-├── productManagement.cpp       # Product CRUD operations
-├── inventoryTracking.cpp       # Inventory viewing and search
-├── salesManagement.cpp         # Sales recording and billing
-├── reports.cpp                 # Report generation and analytics
-├── inventorylist.txt          # Persistent storage for products
-└── sales.txt                  # Persistent storage for sales data
+IMS-PF/
+├── Grocery Store Project/
+│   ├── main.cpp                # Entry point and main menu
+│   ├── productManagement.cpp   # Add / update / delete products
+│   ├── inventoryTracking.cpp   # Inventory table and product search
+│   ├── salesManagement.cpp     # Transactions and billing
+│   ├── reports.cpp             # Sales history, top seller, revenue
+│   ├── inventorylist.txt       # Saved inventory data
+│   └── sales.txt               # Saved sales data
+├── .gitattributes
+└── README.md
 ```
 
-## Installation & Setup
+## 🚀 Getting Started
 
 ### Prerequisites
-- C++ compiler (GCC, MSVC, or similar)
-- Windows OS (for `system("cls")` and `system("color")` commands)
+- A C++ compiler such as **g++** (MinGW on Windows works well)
+- **Windows**, since the program uses `system("cls")` and `system("color")`
 
-### Compilation
-Compile all source files together:
+### Build
+
 ```bash
+git clone https://github.com/ShortBatman/IMS-PF.git
+cd "IMS-PF/Grocery Store Project"
 g++ main.cpp productManagement.cpp inventoryTracking.cpp salesManagement.cpp reports.cpp -o inventory_system
 ```
 
-### Running the Program
+### Run
+
 ```bash
 ./inventory_system
 ```
 
-## Usage Guide
+On Windows you can also run `inventory_system.exe` directly.
 
-### Starting the Program
-1. Run the executable
-2. The main menu will display with 5 options
+## 🧭 How to Use
 
-### Adding a Product
-1. Select "Product Management" from main menu
-2. Choose "Add Product"
-3. Enter unique Product ID
-4. Enter Product Name
-5. Enter Price (must be positive)
-6. Enter Initial Quantity (must be positive)
+1. **Launch** the program. Saved inventory and sales are loaded automatically.
+2. **Pick an option** from the main menu.
+3. **Add your products** first, with unique IDs and names.
+4. **Make a sale** by adding one or more items to a transaction. The bill is itemized and stock drops automatically.
+5. **Check reports** for sales history, your best seller, and total revenue.
+6. **Exit properly** from the menu so your data is saved.
 
-### Recording a Sale
-1. Select "Sales Management" from main menu
-2. Choose "Record Sale"
-3. Enter number of different products in the transaction
-4. For each product:
-   - Enter Product ID
-   - Enter quantity to sell
-5. System displays complete bill with grand total
+> ⚠️ Close the program through the menu. Closing the console window directly may skip the save step.
 
-### Viewing Reports
-1. Select "Reports" from main menu
-2. Choose from:
-   - View all sales history
-   - View top-selling product
-   - View total revenue
+## 🛡️ Built-in Safeguards
 
-### Saving Data
-1. Select "Save and exit" from main menu
-2. All data automatically saves to text files
+- ✅ Input validation on user entries
+- ✅ Duplicate product ID and name prevention
+- ✅ Overselling protection via stock checks
+- ✅ Error handling for invalid choices
 
-## Data Files Format
+## ⚙️ Technical Notes
 
-### inventorylist.txt
-```
-[Product Count]
-[Product ID]
-[Product Name]
-[Price] [Quantity]
-...
-```
+- **Language:** C++
+- **Storage:** plain `.txt` files, no database needed
+- **Capacity:** fixed arrays holding up to **100 products** and **500 sales**
+- **Design:** split into separate modules for products, inventory, sales, and reports
 
-### sales.txt
-```
-[Sales Count]
-[Product ID] [Quantity Sold] [Line Total]
-...
-```
+## ⚠️ Limitations
 
-## Technical Details
+- Windows only, because of `system("cls")` and `system("color")`
+- Fixed-size storage (100 products, 500 sales)
+- No user authentication
+- Text-file storage instead of a real database
 
-### Data Structures
-- **Arrays**: Used for storing product and sales data
-- **Maximum Capacity**: 100 products, 500 sales records
-- **External Variables**: Shared across modules using `extern` keyword
+## 🔮 Future Enhancements
 
-### Input Validation
-- Type checking for all numeric inputs
-- Range validation (no negative values)
-- Duplicate checking for product IDs and names
-- Stock availability verification
+- [ ] Database integration (SQLite / MySQL)
+- [ ] Cross-platform support (Linux and macOS)
+- [ ] User authentication and roles
+- [ ] Dynamic storage instead of fixed arrays
+- [ ] Low-stock alerts
 
-### Error Handling
-- Invalid input recovery with `cin.clear()` and `cin.ignore()`
-- File operation validation
-- User-friendly error messages
+## 🤝 Contributing
 
-## Limitations
+This is an educational project and contributions are welcome. Fork the repo, create a branch, and open a pull request.
 
-- Console-based interface (no GUI)
-- Windows-specific commands for screen clearing and colors
-- Fixed array sizes (100 products, 500 sales)
-- Single-user system (no concurrent access)
-- Text file storage (no database integration)
+## 👤 Author
 
-## Future Enhancements
+**ShortBatman**
+GitHub: [@ShortBatman](https://github.com/ShortBatman)
 
-- Database integration for better data management
-- Cross-platform compatibility
-- User authentication system
-- Export reports to PDF/Excel
-- Barcode scanning support
-- Multi-currency support
-- Low stock alerts
-- Sales analytics with graphs
+---
 
-## Author
+<div align="center">
 
-Created as a programming fundamentals project demonstrating file handling, modular programming, and data management in C++.
+⭐ If this project helped you, consider giving it a star!
 
-## License
+*Built with ☕ and C++ as a Programming Fundamentals project*
 
-This project is open source and available for educational purposes.
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests for any improvements.
+</div>
